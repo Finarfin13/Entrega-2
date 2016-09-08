@@ -10,3 +10,134 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+/*
+  * Copyright (C) 2016 Finarfin
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+package entrega2_finarfin;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Finarfon
+ */
+public class Entrega2_Finarfin {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        System.out.println("Bienvenido al programa de Finarfin");
+        System.out.println("1. Numeros pares");
+
+        System.out.println("Ingrese un numero");
+        Scanner as = new Scanner(System.in);
+        int a = as.nextInt();
+
+        System.out.println("Ingrese un segundo numero");
+        Scanner sd = new Scanner(System.in);
+        int b = sd.nextInt();
+
+        if (a > b) {
+            while (b < a) {
+                if (b % 2 == 0) {
+                    System.out.println(b);
+                }
+                b = b + 1;
+            }
+        }
+        if (a < b) {
+            while (a < b) {
+                if (a % 2 == 0) {
+                    System.out.println(a);
+                }
+                a = a + 1;
+            }
+        }
+        System.out.println("2. Sumatoria");
+        System.out.println("Elija un numero");
+        Scanner df = new Scanner(System.in);
+        int c = df.nextInt();
+        int c_0 = c;
+        int d = 0;
+
+        while (c > 0) {
+            d = d + c;
+            c = c - 1;
+        }
+        System.out.println("La sumatoria de " + (c_0) + " es: " + d);
+
+        System.out.println("3. Raices");
+
+        System.out.println("Ingrese la variable a");
+        Scanner fg = new Scanner(System.in);
+        int e = fg.nextInt();
+
+        System.out.println("Ingrese la variable b");
+        Scanner gh = new Scanner(System.in);
+        int f = gh.nextInt();
+
+        System.out.println("Ingrese la variable c");
+        Scanner hj = new Scanner(System.in);
+        int g = hj.nextInt();
+
+        int h = (f * f) + (4 * e * g);
+
+        if (h < 0) {
+            System.out.println("El discriminante de (a, b, c) = (" + e + ", "
+                    + f + ", " + g + ") es : " + h + "Por tanto, el conjunto"
+                    + "solucion es vacio.");
+        }
+
+        if (h == 0) {
+            int j = (int) (((-f) + Math.pow(h, (1 / 2))) / (2 * e));
+            System.out.println("El discriminante de (a, b, c) = (" + e + ", "
+                    + f + ", " + g + ") es : " + h + "Por tanto, el conjunto"
+                    + "posee solucion unica, la cual es" + j);
+        }
+
+        if (h > 0) {
+            int j = (int) (((-f) + Math.pow(h, (1 / 2))) / (2 * e));
+            int i = (int) (((-f) - Math.pow(h, (1 / 2))) / (2 * e));
+            System.out.println("El discriminante de (a, b, c) = (" + e + ", "
+                    + f + ", " + g + ") es : " + h + "Por tanto, el conjunto"
+                    + "posee solucion es: {" + i + ", " + j + "}");
+        }
+        
+         Scanner jk = new Scanner(System.in);
+            System.out.println("Elija el  lado A que desea evaluar");
+            int k = jk.nextInt();
+
+            Scanner kl = new Scanner(System.in);
+            System.out.println("Elija el  numero A que desea evaluar");
+            int l = kl.nextInt();
+
+            Scanner qw = new Scanner(System.in);
+            System.out.println("Elija el  numero A que desea evaluar");
+            int m = qw.nextInt();
+
+            if ((k + l) > m && (l + m) > k && (k + m) > l) {
+                System.out.println("Es triangulo");
+            }
+
+            if ((k + l) < m || (l + m) < k || (k + m) < l) {
+                System.out.println("no es triangulo");
+            }
+        
+    }
+
+}
